@@ -15,13 +15,14 @@
 	<h1>Hello World</h1>
 	<ul id="messages-list">
 		<script id="messages-template" type="text/x-handlebars-template">
-			<li>\{{message}}</li>
+			<li>\{{username}} says <strong>\{{message}}</strong></li>
 		</script>
 	</ul>
 	
 	<!-- form to send a new message -->
 	<form id="send-msg">
-		<input type="text" id="new-msg" placeoholder="Your message" autofocus>
+		<input type="text" id="new-msg" placeholder="Your message" autofocus>
+		<input type="text" id="username">
 		<input type="submit" value="Send">
 	</form>
 

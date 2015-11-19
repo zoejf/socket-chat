@@ -14,6 +14,7 @@ $(function() {
 
 		//get new message from form input
 		var newMsg = $('#new-msg').val();
+		var username = $('#username').val();
 
 		//send new message to socket (server)
 		socket.emit('chat message', newMsg);
