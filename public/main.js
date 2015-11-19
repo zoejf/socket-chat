@@ -17,16 +17,18 @@ $(function() {
 		var username = $('#username').val();
 
 		//send new message to socket (server)
-		socket.emit('chat message', newMsg);
+		socket.emit('chat message', newMsg, username);
 	});
 
 	//recieve message from socket (server)
-	socket.on('chat message', function (msg) {
+	socket.on('chat message', function (msg, username) {
 		// $('#messages').append($('<li>' + msg + '</li>'));
-		var messageHtml = template({ message: msg});
+		var messageHtml = template({ message: msg, username: username });
 		console.log(messageHtml);
 		$messageList.append(messageHtml);
 		$('#new-msg').val("");
+		$('#username').val("");
+		$('#new-msg').focus();
 	});
 
 
