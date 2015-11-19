@@ -13,11 +13,12 @@
 </head>
 <body>
 	<h1>Hello World</h1>
-
-	<ul id="messages">
-		
+	<ul id="messages-list">
+		<script id="messages-template" type="text/x-handlebars-template">
+			<li>\{{message}}</li>
+		</script>
 	</ul>
-
+	
 	<!-- form to send a new message -->
 	<form id="send-msg">
 		<input type="text" id="new-msg" placeoholder="Your message" autofocus>
@@ -29,6 +30,8 @@
 
 	<!-- Bootstrap JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<!-- handlebars -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
 
 	<!-- socket.io -->
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
