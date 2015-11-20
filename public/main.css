@@ -1,3 +1,26 @@
 ul {
 	list-style-type: none; 
 }
+div.thumbnail{
+	width: 750px;
+	margin-left: -40px;
+	margin-right: auto;
+
+}
+
+form#send-msg {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-group {
+	margin-left: auto;
+	margin-right: auto;
+}
+#new-msg {
+	width: 685px;
+}
+button.submit {
+	margin-left: auto;
+	margin-right: auto;
+}

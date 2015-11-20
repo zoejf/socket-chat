@@ -12,20 +12,48 @@
 
 </head>
 <body>
-	<h1>Hello World</h1>
-	<ul id="messages-list">
-		<script id="messages-template" type="text/x-handlebars-template">
-			<li>\{{username}} says <strong>\{{message}}</strong></li>
-		</script>
-	</ul>
-	
-	<!-- form to send a new message -->
-	<form id="send-msg">
-		<!-- <input type="text" id="username" placeholder="Username"> -->
-		<input type="text" id="new-msg" placeholder="Your message" autofocus>
-		<input type="submit" value="Send">
-	</form>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        Socket Chat
+	      </a>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2 form">
+				<!-- form to send a new message -->
+				<form id="send-msg" class="form-inline">
+					<!-- <input type="text" id="username" placeholder="Username"> -->
+					<div class="form-group">
+						<input type="text" id="new-msg" class="form-control" placeholder="Your message" autofocus>
+					</div>
+					<input type="submit" value="Send" class="btn btn-info submit">
+				</form>
+			</div>
+			<br>
+			<br>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2">
+				<ul id="messages-list">
+					<script id="messages-template" type="text/x-handlebars-template">
+						<div class="thumbnail">
+							<li>\{{username}} says <strong>\{{message}}</strong></li>
+						</div>
+					</script>
+				</ul>
 
+			</div>
+		</div>
+		
+
+	</div> <!-- end of container -->
+	
 	<!-- jquery -->  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
