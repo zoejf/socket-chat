@@ -7,11 +7,19 @@ div.thumbnail{
 	margin-right: auto;
 
 }
-
+small {
+	color: gray;
+}
+div.welcome {
+	text-align: center;
+	margin: 10px;
+	display: block;
+}
 form#send-msg {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	display:none;
 }
 .form-group {
 	margin-left: auto;

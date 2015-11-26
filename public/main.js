@@ -8,11 +8,16 @@ $(function() {
 	var source = $('#messages-template').html();
 	var template = Handlebars.compile(source);
 
-	function welcome(){
-		var answer = prompt("What is your username?");
-		return answer;
-	}
-	var username = welcome();
+	//will there be a scope issue with username?
+	var username;
+	//on submit of username form, message form and chat view appears
+	$('#username').on('submit', function (event) {
+		event.preventDefault();
+
+		username = $('#username').val();
+		$('#send-msg').toggle();
+		$('.welcome').toggle();
+	});
 
 	// submit form to send a message
 	$('#send-msg').on('submit', function (event) {

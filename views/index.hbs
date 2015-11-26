@@ -25,9 +25,17 @@
 		
 		<div class="row">
 			<div class="col-xs-8 col-xs-offset-2 form">
+				<div class="welcome">
+					<h2>Welcome to Socket Chat!<br><small>Please enter your username to join the conversation</small></h2>
+					<form class="form-inline" id="username">
+						<div class="form-group">
+							<input type="text" id="username" class="form-control" placeholder="Username" autofocus>
+						</div>
+						<input type="submit" value="Join Chat" class="btn btn-info submit">
+					</form>
+				</div>
 				<!-- form to send a new message -->
 				<form id="send-msg" class="form-inline">
-					<!-- <input type="text" id="username" placeholder="Username"> -->
 					<div class="form-group">
 						<input type="text" id="new-msg" class="form-control" placeholder="Your message" autofocus>
 					</div>
